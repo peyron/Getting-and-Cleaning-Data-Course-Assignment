@@ -4,7 +4,7 @@ activityLabels <- read.table("UCI HAR Dataset/activity_labels.txt")
 
 features <- read.table("UCI HAR Dataset/features.txt") 
 
-featuresKeep <- grep(".*mean.*|.*std.*", features[,2])
+featuresKeep <- grep(".*mean.*|.*std.*", features[,2]) ## Note: meanfreq features will also be included, either way is correct as instructions easily could be interprested differently
 
 trainX <- read.table("UCI HAR Dataset/train/X_train.txt")[featuresKeep]
 trainLabels <- read.table("UCI HAR Dataset/train/y_train.txt")
